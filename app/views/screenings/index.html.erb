@@ -1,0 +1,32 @@
+<div class="container">
+    <br>
+    <div class="header">Screenings</div>
+</div>
+
+<table class="container">
+  <tr>
+    <th>Movie</th>
+    <th>Time before screening</th>
+    <th>Seats taken</th>
+    <th>Seats total</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @screenings.each do |screening| %>
+  <tr>
+    <td><%= screening.movie_id %></td>
+    <td><%= screening.time_before_screening %></td>
+    <td><%= screening.seats_taken %></td>
+    <td><%= screening.seats_total %></td>
+    <td><%= link_to 'Show', screening %></td>
+    <td><%= link_to 'Edit', edit_screening_path(screening) %></td>
+    <td><%= link_to 'Destroy', screening, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Screening', new_screening_path %>

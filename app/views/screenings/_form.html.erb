@@ -1,0 +1,33 @@
+<%= form_for(@screening) do |f| %>
+  <% if @screening.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@screening.errors.count, "error") %> prohibited this screening from being saved:</h2>
+
+      <ul>
+      <% @screening.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :movie %><br />
+    <%= f.text_field :movie %>
+  </div>
+  <div class="field">
+    <%= f.label :time_before_screening %><br />
+    <%= f.text_field :time_before_screening %>
+  </div>
+  <div class="field">
+    <%= f.label :seats_taken %><br />
+    <%= f.text_field :seats_taken %>
+  </div>
+  <div class="field">
+    <%= f.label :seats_total %><br />
+    <%= f.text_field :seats_total %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Movie:</b>
+  <%= @screening.movie %>
+</p>
+
+<p>
+  <b>Time before screening:</b>
+  <%= @screening.time_before_screening %>
+</p>
+
+<p>
+  <b>Seats taken:</b>
+  <%= @screening.seats_taken %>
+</p>
+
+<p>
+  <b>Seats total:</b>
+  <%= @screening.seats_total %>
+</p>
+
+
+<%= link_to 'Edit', edit_screening_path(@screening) %> |
+<%= link_to 'Back', screenings_path %>

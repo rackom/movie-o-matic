@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  movie: 
+  time_before_screening: 1
+  seats_taken: 1
+  seats_total: 1
+
+two:
+  movie: 
+  time_before_screening: 1
+  seats_taken: 1
+  seats_total: 1

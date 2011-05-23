@@ -1,0 +1,5 @@
+OK - 0 vyhodit
+- ukladat aj kinosalu v ktorej to je
+OK - sede miesta neriesit
+OK - nazvy ukladat v povodnom tvare
+OK - urobit si pole zobrazovaneho mena + to bude aj meno na find a pod.
