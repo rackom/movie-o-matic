@@ -1,14 +1,14 @@
 MovieOMatic2::Application.routes.draw do
   resources :screenings
 
-  root :to => 'movies#index'
+  root :to => 'movies#chart'
 
   resources :movies do
     get :chart, :on => :collection
     get :autocomplete, :on => :collection
   end
 
-    #match 'movies/:first/:second' => 'movies#chart'
+  #match 'movies/:first/:second' => 'movies#chart'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
