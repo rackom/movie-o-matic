@@ -34,6 +34,7 @@ class MoviesController < ApplicationController
     end
 
     respond_to do |format|
+      @template.template_format = :html
       format.html # index.html.erb
       format.xml  { render :xml => @movies }
     end
