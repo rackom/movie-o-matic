@@ -122,3 +122,7 @@ $(document).ready(function() {
 </table>
 
 <div id="movies_chart" class="movies_chart" style="width:600px; height:400px;"></div>
+
+<% Screening.get_percent_filling_by_movie_id(@first.id).each do |vec| %>
+  <%= vec.obsadenost.to_f %>
+<%end%>
