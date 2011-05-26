@@ -17,18 +17,22 @@ class MoviesController < ApplicationController
 
   def chart
     @movies = Movie.get_movies_ordered_by_screening_count
-    if @first.nil?
-      @first = Movie.find(1)
+    if params[:first].nil?
+      if @first.nil?
+        @first = Movie.find(1)
+      end
     else
       @first = Movie.find(params[:first])
     end
       
-    if @second.nil?
-      @second = Movie.find(2)
+    if params[:second].nil?
+      if @second.nil?
+        @second = Movie.find(12)
+      end
     else
       @second = Movie.find(params[:second])
     end
-    
+
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @movies }

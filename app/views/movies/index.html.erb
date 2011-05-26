@@ -7,8 +7,9 @@
   <tr>
     <td>
       <%= form_tag movies_path, :method => :get do |f| %>
-    <%= text_field_tag :q, @query, 'data-autocomplete-url' => autocomplete_movies_path %><%= submit_tag 'Search' %>
-<% end %>
+        <%= text_field_tag :q, @query, 'data-autocomplete-url' => autocomplete_movies_path %>
+        <%= submit_tag 'Search' %>
+      <% end %>
     </td>
   </tr>
   <tr>

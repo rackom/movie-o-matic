@@ -1,3 +1,21 @@
+## TEST
+
+  <tr>
+    <th>Name</th>
+    <th>First movie</th>
+    <th>Second movie</th>
+  </tr>
+
+<% @movies.each do |movie| %>
+  <tr>
+    <td><%= movie.name %></td>
+    <td><%= link_to 'Add first', chart_movies_path(:first => movie.id, :second => @second.id) %></td>
+    <td><%= link_to 'Add second', chart_movies_path(:first => @first.id, :second => movie.id) %></td>
+  </tr>
+<% end %>
+
+##
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
