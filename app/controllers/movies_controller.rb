@@ -35,6 +35,7 @@ class MoviesController < ApplicationController
 
     respond_to do |format|
       format.html # chart.html.erb
+      format.xml  { render :xml => @movies }
     end
   end
 
