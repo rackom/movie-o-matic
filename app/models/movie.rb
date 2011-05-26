@@ -4,7 +4,7 @@
 class Movie < ActiveRecord::Base
 
   def self.get_movies_ordered_by_screening_count
-    find_by_sql(["SELECT movies.id as id, movies.name, COUNT(screenings.id) as number_of_screenings FROM movies JOIN screenings ON movies.id = screenings.movie_id GROUP BY screenings.movie_id ORDER BY number_of_screenings DESC"])
+    find_by_sql(["SELECT movies.id as id, movies.name, COUNT(screenings.id) as number_of_screenings FROM movies JOIN screenings ON movies.id = screenings.movie_id GROUP BY screenings.movie_id, movies.id ORDER BY number_of_screenings DESC"])
   end
   
   def self.schedule_downloads
