@@ -1,0 +1,124 @@
+<div class="container">
+    <div class="header">Movies</div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  $('#menu_select_1').bind('change', function() { window.location.href = $(this).val() });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  $('#menu_select_2').bind('change', function() { window.location.href = $(this).val() });
+});
+</script>
+
+<%
+    array1 = []
+	@movies.each do |movie|
+ 		array1 << [movie.name, chart_movies_url(:first => @first.id, :second => movie.id)]
+	end
+
+	array2 = []
+	@movies.each do |movie|
+ 		array2 << [movie.name, chart_movies_url(:first => movie.id, :second => @second.id)]
+	end
+%>
+
+<script type="text/javascript" charset="utf-8">
+  $(function() {
+    new Highcharts.Chart({
+        chart: {
+            renderTo: "movies_chart",
+            defaultSeriesType: 'spline',
+            backgroundColor: "#eeeeee"
+        },
+        tooltip: {
+            formatter: function() {
+                return 'Predstavenie <b>'+ this.series.name +'</b><br>Čas pred predstavením <b>'
+                        + this.x +'h</b><br>Obsadenosť <b>'+ this.y +'%</b>';
+        }
+        },
+        title: {
+            text: "Obsadenosť kinosál podľa času pred predstavením"
+        },
+        plotOptions: {
+            spline: {
+                lineWidth: 4,
+                states: {
+                    hover: {
+                        lineWidth: 5
+                    }
+                },
+                marker: {
+                    enabled: false,
+                    states: {
+                        hover: {
+                            enabled: true,
+                            symbol: 'circle',
+                            radius: 5,
+                            lineWidth: 1
+                        }
+                    }
+                }
+            }
+        },
+        xAxis: {
+            type: "number",
+            title: {
+                text: "Cas pred predstavenim (h)"
+            }
+        },
+        yAxis: {
+            title: {
+                text: "Naplnenost (%)"
+            }
+        },
+        series: [
+		{
+            name: "<%= Movie.get_movie_name_by_id(@first.id) %>",
+            data: [
+            <% Screening.get_percent_filling_by_movie_id(@first.id).each do |vec| %>
+                [
+				<%= vec.time_before_screening.to_f %>
+				<%= "," %>
+                <%= (((vec.attributes["obsadenost"].to_f) * 10**2).round / (10**2).to_f)*100 %>
+				]
+				<%= "," %>
+            <%end%>
+            ]
+        },
+        {
+            name: "<%= Movie.get_movie_name_by_id(@second.id) %>",
+            data: [
+            <% Screening.get_percent_filling_by_movie_id(@second.id).each do |vec| %>
+                [
+				<%= vec.time_before_screening.to_f %>
+				<%= "," %>
+				<%= (((vec.attributes["obsadenost"].to_f) * 10**2).round / (10**2).to_f)*100 %>
+				]
+				<%= "," %>
+            <%end%>
+            ]
+        }
+		]
+    });
+  });
+</script>
+<table class="container">
+  <tr>
+	<td>Prvy film:</td>
+    <td>
+	  <%= select_tag(:menu_select_2, options_for_select(array2)) %>
+    </td>
+  </tr>
+  <tr>
+	<td>Druhy film:</td>
+    <td>
+	  <%= select_tag(:menu_select_1, options_for_select(array1)) %>
+    </td>
+  </tr>
+</table>
+
+<div id="movies_chart" class="movies_chart" style="width:600px; height:400px;"></div>
