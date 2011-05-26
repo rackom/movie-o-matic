@@ -34,11 +34,18 @@ class MoviesController < ApplicationController
     end
 
     respond_to do |format|
-      @template.template_format = :html
       format.html # index.html.erb
       format.xml  { render :xml => @movies }
     end
   end
+  
+  def with_format(format, &block)
+      old_formats = formats
+      self.formats = [format]
+      block.call
+      self.formats = old_formats
+      nil
+    end
 
   def autocomplete
     matches = Movie.name_starts_with(params[:term]).collect(&:name)
