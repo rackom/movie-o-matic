@@ -81,9 +81,9 @@ $(document).ready(function() {
             data: [
             <% Screening.get_percent_filling_by_movie_id(@first.id).each do |vec| %>
                 [
-				<%= vec.attributes["tbs"].to_f %>
+				<%= vec.tbs.to_f %>
 				<%= "," %>
-                <%= (((vec.attributes["obsadenost"].to_f) * 10**2).round / (10**2).to_f)*100 %>
+                <%= (((vec.obsadenost.to_f) * 10**2).round / (10**2).to_f)*100 %>
 				]
 				<%= "," %>
             <%end%>
@@ -94,9 +94,9 @@ $(document).ready(function() {
             data: [
             <% Screening.get_percent_filling_by_movie_id(@second.id).each do |vec| %>
                 [
-				<%= vec.attributes["tbs"].to_f %>
+				<%= vec.tbs.to_f %>
 				<%= "," %>
-				<%= (((vec.attributes["obsadenost"].to_f) * 10**2).round / (10**2).to_f)*100 %>
+				<%= (((vec.obsadenost.to_f) * 10**2).round / (10**2).to_f)*100 %>
 				]
 				<%= "," %>
             <%end%>
