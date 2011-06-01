@@ -11,8 +11,8 @@ MovieOMatic2::Application.routes.draw do
     get :autocomplete, :on => :collection
   end
 
-  match 'movies/:first/:second' => 'movies#chart', :as => :tabulka
-  match 'uvod' => 'other#uvod', :as => :uvod
+  match 'movies/:first/:second' => 'movies#chart'
+  match 'about' => 'other#about', :as => :about
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

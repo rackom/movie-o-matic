@@ -68,7 +68,8 @@ $(document).ready(function() {
             type: "number",
             title: {
                 text: "Cas pred predstavenim (h)"
-            }
+            },
+            reversed: true
         },
         yAxis: {
             title: {
@@ -111,13 +112,13 @@ $(document).ready(function() {
 <div class="entry">
     <table class="container">
       <tr>
-        <td>Prvy film:</td>
+        <td width="80">Prvy film:</td>
         <td>
           <%= select_tag(:menu_select_2, options_for_select(array2, chart_movies_url(:first => @first.id, :second => @second.id))) %>
         </td>
       </tr>
       <tr>
-        <td>Druhy film:</td>
+        <td width="80">Druhy film:</td>
         <td>
           <%= select_tag(:menu_select_1, options_for_select(array1, chart_movies_url(:first => @first.id, :second => @second.id))) %>
         </td>
