@@ -110,15 +110,15 @@ $(document).ready(function() {
   <tr>
 	<td>Prvy film:</td>
     <td>
-	  <%= select_tag(:menu_select_2, options_for_select(array2, @first.id)) %>
+	  <%= select_tag(:menu_select_2, options_for_select(array2, chart_movies_url(:first => @first.id, :second => @second.id))) %>
     </td>
   </tr>
   <tr>
 	<td>Druhy film:</td>
     <td>
-	  <%= select_tag(:menu_select_1, options_for_select(array1, @second.id)) %>
+	  <%= select_tag(:menu_select_1, options_for_select(array1, chart_movies_url(:first => @first.id, :second => @second.id))) %>
     </td>
   </tr>
 </table>
 
-<div id="movies_chart" class="movies_chart" style="width:600px; height:400px;"></div>
+<div id="movies_chart" class="movies_chart" style="width:800px; height:400px;"></div>
