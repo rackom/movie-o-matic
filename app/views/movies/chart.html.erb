@@ -110,13 +110,13 @@ $(document).ready(function() {
   <tr>
 	<td>Prvy film:</td>
     <td>
-	  <%= select_tag(:menu_select_2, options_for_select(array2)) %>
+	  <%= select_tag(:menu_select_2, options_for_select(array2, @first.id)) %>
     </td>
   </tr>
   <tr>
 	<td>Druhy film:</td>
     <td>
-	  <%= select_tag(:menu_select_1, options_for_select(array1)) %>
+	  <%= select_tag(:menu_select_1, options_for_select(array1, @second.id)) %>
     </td>
   </tr>
 </table>

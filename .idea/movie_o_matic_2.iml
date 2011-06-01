@@ -119,6 +119,13 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] mime-types (v1.16, /Users/michalracko/.gem/ruby/1.8/gems/mime-types-1.16)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] abstract (v1.0.0, /Users/michalracko/.gem/ruby/1.8/gems/abstract-1.0.0)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] mail (v2.2.19, /Library/Ruby/Gems/1.8/gems/mail-2.2.19)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] whenever (v0.6.8, /Library/Ruby/Gems/1.8/gems/whenever-0.6.8)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] jquery-rails (v1.0.9, /Library/Ruby/Gems/1.8/gems/jquery-rails-1.0.9)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rspec-rails (v2.6.1, /Library/Ruby/Gems/1.8/gems/rspec-rails-2.6.1)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rspec (v2.6.0, /Library/Ruby/Gems/1.8/gems/rspec-2.6.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rspec-core (v2.6.3, /Library/Ruby/Gems/1.8/gems/rspec-core-2.6.3)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rspec-mocks (v2.6.0, /Library/Ruby/Gems/1.8/gems/rspec-mocks-2.6.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rspec-expectations (v2.6.0, /Library/Ruby/Gems/1.8/gems/rspec-expectations-2.6.0)" level="application" />
   </component>
 </module>
 
