@@ -1,8 +1,9 @@
-<div class="container">
-    <br>
-    <div class="header">Movies</div>
+<div class="entry">
+    <h2 class="title">Filmy</h2>
 </div>
 
+<div style="clear: both;">&nbsp;</div>
+<div class="entry">
 <table class="container">
   <tr>
     <td>
@@ -12,14 +13,16 @@
       <% end %>
     </td>
   </tr>
-  <tr>
-    <th>Name</th>
-  </tr>
-
-<%  %>
-<% @movies.each do |movie| %>
-  <tr>
-    <td><%= movie.name %></td>
-  </tr>
-<% end %>
 </table>
+</div>
+
+<div style="clear: both;">&nbsp;</div>
+<div class="entry">
+  <table>
+    <% @movies.each do |movie| %>
+      <tr>
+        <td><%= movie.name %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
