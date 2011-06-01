@@ -19,7 +19,7 @@ class MoviesController < ApplicationController
     @movies = Movie.get_movies_ordered_by_screening_count
     if params[:first].nil?
       if @first.nil?
-        @first = Movie.find(1)
+        @first = Movie.find(119)
       end
     else
       @first = Movie.find(params[:first])
@@ -27,7 +27,7 @@ class MoviesController < ApplicationController
       
     if params[:second].nil?
       if @second.nil?
-        @second = Movie.find(12)
+        @second = Movie.find(123)
       end
     else
       @second = Movie.find(params[:second])
