@@ -54,7 +54,16 @@
       <file leaf-file-name="screening.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/screening.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="3" selection-start="633" selection-end="633" vertical-scroll-proportion="0.31075698">
+            <state line="8" column="4" selection-start="223" selection-end="223" vertical-scroll-proportion="0.19123507">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="about.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/other/about.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="100" selection-start="324" selection-end="324" vertical-scroll-proportion="-4.0">
               <folding />
             </state>
           </provider>
@@ -81,10 +90,10 @@
         <option value="$PROJECT_DIR$/app/views/movies/index.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/other/about.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/movies_controller.rb" />
         <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
         <option value="$PROJECT_DIR$/app/views/movies/chart.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/other/about.html.erb" />
         <option value="$PROJECT_DIR$/app/models/screening.rb" />
       </list>
     </option>
@@ -744,13 +753,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/other/about.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="9" selection-start="686" selection-end="686" vertical-scroll-proportion="0.31578946">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/movie.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="6" selection-start="675" selection-end="675" vertical-scroll-proportion="0.3685259">
@@ -772,6 +774,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/other/about.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="100" selection-start="324" selection-end="324" vertical-scroll-proportion="-4.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/movies/chart.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="71" column="26" selection-start="2009" selection-end="2009" vertical-scroll-proportion="-14.761905">
@@ -781,7 +790,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/screening.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="3" selection-start="633" selection-end="633" vertical-scroll-proportion="0.31075698">
+        <state line="8" column="4" selection-start="223" selection-end="223" vertical-scroll-proportion="0.19123507">
           <folding />
         </state>
       </provider>
